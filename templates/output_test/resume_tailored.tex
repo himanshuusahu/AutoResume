@@ -1,0 +1,215 @@
+%-------------------------
+% Resume in Latex
+% Author : Gennadii Chursov
+% Based off of: https://github.com/sb2nov/resume and https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Name Surname} \\ \vspace{1pt}
+    \small \textit{Automation QA Engineer} \\
+    123-456-7890 $|$ \href{mailto:namesurname@gmail.com}{\underline{namesurname@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/namesurname/}{\underline{linkedin.com/in/namesurname/}} $|$
+    \href{https://github.com/namesurname}{\underline{github.com/namesurname}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section*{Summary}
+Results-oriented and detail-driven Automation Quality Engineer with a strong background in Java programming and a passion for ensuring software reliability. Experienced in designing, implementing, and executing automated test scripts to verify the functionality and performance of software applications. Proven track record of collaborating with development teams to identify and resolve issues early in the development process. Adept at utilizing testing frameworks such as JUnit and incorporating continuous integration tools like Jenkins. Skilled in creating and maintaining automated test suites for web and mobile applications. Committed to delivering high-quality software by applying industry best practices in testing and automation. Seeking opportunities to contribute technical expertise and enhance software development processes as an Automation Quality Engineer.
+
+%-----------PROGRAMMING SKILLS-----------
+% BEGIN_SKILLS
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, SQL} \\
+     \textbf{Frameworks}{: Selenium/Selenide, Cucumber, JUnit, RestAssured} \\
+     \textbf{Developer Tools}{: Jenkins, Docker, Maven/Gradle, Git} \\
+     \textbf{Testing Tools}{: Cucumber, RestAssured}
+    }}
+ \end{itemize}
+% END_SKILLS
+
+
+%-----------EXPERIENCE-----------
+% BEGIN_EXPERIENCE
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Lead Automation QA Engineer}{Apr. 2020 -- Feb. 2021}
+      {Somename-bank - it's a big bank with web, API and mobile applications.}{City, Country}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a comprehensive testing framework using Java, Cucumber, and RestAssured, enabling component testing across 5+ teams}
+        \resumeItem{Achieved 100\% automation coverage of manual scenarios using Java, Selenide, Cucumber, and RestAssured, reducing regression testing time by 60\% (from 5 days to 2 days)}
+        \resumeItem{Integrated and maintained automation jobs in Jenkins CI/CD pipelines, ensuring robust test automation logs, reporting, and bug resolution verification}
+        \resumeItem{Successfully introduced test quality metrics, training materials, and streamlined onboarding processes across 8 teams, enhancing overall quality and reducing production defects}
+        \resumeItem{Mentored QA engineers, guided task assignments, and contributed to candidate interviews, fostering team growth and expertise}
+        \resumeItem{Recognized with "Engineer of the Year - QA" and "Delivery Team of the Year" awards for outstanding contributions}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Senior Quality Assurance Engineer}{Jul 2017 - Feb 2018}
+      {Experio, OpenBank}{City, Country}
+      \resumeItemListStart
+        \resumeItem{Executed manual testing for a large banking client, working with diverse technologies such as CFT, MS Dynamics CRM, 3Card-R, and OpenWay Way4}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {QA Engineer}{Feb 2014 - Jul 2017}
+      {LANIT BPM}{City, Country}
+      \resumeItemListStart
+        \resumeItem{Participated in manual QA activities for a medical desktop application and mentored 3 junior engineers, enhancing team capabilities}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+% END_EXPERIENCE
+
+
+%-----------PROJECTS-----------
+% \section{Projects}
+%    \resumeSubHeadingListStart
+%      \resumeProjectHeading
+%          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+%          \resumeItemListStart
+%            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
+%            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
+%            \resumeItem{Visualized GitHub data to show collaboration}
+%            \resumeItem{Used Celery and Redis for asynchronous tasks}
+%          \resumeItemListEnd
+%      \resumeProjectHeading
+%          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+%          \resumeItemListStart
+%            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
+%            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
+%            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
+%            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+%          \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Name State Technical University}{City, Country}
+      {Engineer's Degree, Faculty of Electronics and Instrument Making}{2007 - 2012}
+  \resumeSubHeadingListEnd
+
+%-----------Certifications-----------
+\section{Certifications}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Cloud Digital Leader - Google Cloud} \\
+     \textit{Issued Sep 2022 - Expires Sep 2025} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
