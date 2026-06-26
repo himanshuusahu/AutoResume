@@ -14,16 +14,16 @@ flowchart TD
   A[Input: Job Description + Resume .tex] --> B[Keyword Extraction (keywords.py)]
   B --> C[Prompt Builder (main.py)]
   C --> D[LLM Call (llm.py)]
-  D --> E[Parse LLM XML Tags]
+  D --> E[Parse XML Tags + Patch Resume Sections (main.py)]
   E --> F[Sanitize & Validate LaTeX Fragments (sanitize.py)]
-  F --> G[Patch Resume Sections (main.py)]
-  G --> H[Write tailored .tex to output/]
+  F --> G[Write tailored .tex to output/]
 
   subgraph Optional
-    I[Compile PDF locally (compile.py)]
+    H[Compile PDF locally (compile.py)]
   end
 
-  H -->|--compile| I
+  G -->|--compile| H
+
 ```
 
 ### Key modules
