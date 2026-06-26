@@ -10,19 +10,28 @@ Tailor a **LaTeX resume** to a job description using keyword extraction + an Ope
 ## Architecture
 
 ```mermaid
-flowchart TD
-  A[Input: Job Description + Resume .tex] --> B[Keyword Extraction (keywords.py)]
-  B --> C[Prompt Builder (main.py)]
-  C --> D[LLM Call (llm.py)]
-  D --> E[Parse XML Tags + Patch Resume Sections (main.py)]
-  E --> F[Sanitize & Validate LaTeX Fragments (sanitize.py)]
-  F --> G[Write tailored .tex to output/]
-
-  subgraph Optional
-    H[Compile PDF locally (compile.py)]
-  end
-
-  G -->|--compile| H
+    [Job Description + Resume.tex]
+              |
+              v
+   [keywords.py → Keyword Extraction]
+              |
+              v
+   [main.py → Prompt Builder]
+              |
+              v
+   [llm.py → LLM Call (OpenAI/Databricks)]
+              |
+              v
+   [main.py → Parse XML Tags + Patch Resume Sections]
+              |
+              v
+   [sanitize.py → Clean & Validate LaTeX Fragments]
+              |
+              v
+   [main.py → Write tailored .tex to /output]
+              |
+              v
+   (Optional) [compile.py → PDF generation]
 
 
 ```
