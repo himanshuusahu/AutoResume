@@ -8,8 +8,8 @@ Tailor a **LaTeX resume** to a job description using keyword extraction + an Ope
 ---
 
 ## Architecture
+```
 
-```mermaid
     [Job Description + Resume.tex]
               |
               v
@@ -29,11 +29,7 @@ Tailor a **LaTeX resume** to a job description using keyword extraction + an Ope
               |
               v
    [main.py → Write tailored .tex to /output]
-              |
-              v
-   (Optional) [compile.py → PDF generation]
-
-
+             
 ```
 
 ### Key modules
